@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertemuan_5.WebViewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@android:color/white" />
+
+        <!--
+            ==========================================
+            MULAI IMPROVISASI: VECTOR ASSET (PROGRESS BAR)
+            ==========================================
+        -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:indeterminate="false"
+            android:progressDrawable="@android:drawable/progress_horizontal"
+            android:visibility="gone" />
+        <!--
+            ==========================================
+            AKHIR IMPROVISASI
+            ==========================================
+        -->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--
+        ==========================================
+        MULAI IMPROVISASI: WEBVIEW CONTAINER
+        ==========================================
+    -->
+    <android.webkit.WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--
+        ==========================================
+        AKHIR IMPROVISASI
+        ==========================================
+    -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        ==========================================
+        MULAI IMPROVISASI: OPTION MENU (GROUP & SUBMENU)
+        ==========================================
+    -->
+
+    <!-- Item Search dengan tampilan dinamis -->
+    <item
+        android:id="@+id/action_search"
+        android:title="Cari"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <!-- Item Share sebagai action button (selalu tampil jika ada ruang) -->
+    <item
+        android:id="@+id/action_share"
+        android:title="Bagikan"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="ifRoom" />
+
+    <!-- Submenu untuk pengelompokan fitur agar rapi -->
+    <item
+        android:id="@+id/menu_more"
+        android:title="Lainnya"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_profile"
+                android:title="Profil Saya"
+                android:icon="@android:drawable/ic_menu_info_details" />
+            <item
+                android:id="@+id/action_about"
+                android:title="Tentang Aplikasi"
+                android:icon="@android:drawable/ic_menu_help" />
+        </menu>
+    </item>
+
+    <!-- Menu Logout dengan warna berbeda (melalui handling di code) -->
+    <item
+        android:id="@+id/action_logout"
+        android:title="Keluar"
+        app:showAsAction="never" />
+
+    <!--
+        ==========================================
+        AKHIR IMPROVISASI OPTION MENU
+        ==========================================
+    -->
+
+</menu>
