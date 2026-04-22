@@ -31,12 +31,14 @@ class AuthActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         //Kondisi jika isLogin bernilai true
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            //Panggil Intent untuk ke MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        val isLogin = sharedPref.getBoolean("isLogin", false)
+//        if (isLogin) {
+//            //Panggil Intent untuk ke MainActivity
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+
         binding.btnLogin.setOnClickListener {
             val username = binding.username.text.toString()
             val password = binding.password.text.toString()
