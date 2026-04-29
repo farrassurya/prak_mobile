@@ -1,4 +1,4 @@
-package com.example.nixzzapps.pertemuan_4
+package com.example.nixzzapps.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.nixzzapps.BaseActivity
 import com.example.nixzzapps.MainActivity
 import com.example.nixzzapps.R
 import com.example.nixzzapps.databinding.ActivityFourthBinding
@@ -36,7 +37,7 @@ class FourthActivity : AppCompatActivity() {
         Log.e("Data Intent", "Nama: $name , Usia: $age, Asal: $from")
 
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, BaseActivity::class.java)
 
             startActivity(intent)
             finish()

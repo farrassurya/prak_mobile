@@ -1,4 +1,4 @@
-package com.example.nixzzapps.pertemuan_2
+package com.example.nixzzapps.Home.pertemuan_2
 
 fun main() {
     println("Hai rekan-rekan...")

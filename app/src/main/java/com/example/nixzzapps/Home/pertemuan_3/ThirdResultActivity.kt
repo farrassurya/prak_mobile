@@ -1,4 +1,4 @@
-package com.example.nixzzapps.pertemuan_3
+package com.example.nixzzapps.Home.pertemuan_3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

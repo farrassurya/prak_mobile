@@ -3,16 +3,15 @@ package com.example.nixzzapps
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.nixzzapps.databinding.ActivityMainBinding
-import com.example.nixzzapps.databinding.ActivityThirdBinding
-import com.example.nixzzapps.pertemuan_4.FourthActivity
+import com.example.nixzzapps.Home.pertemuan_4.FourthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.edit
+import com.example.nixzzapps.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -67,6 +66,14 @@ class MainActivity : AppCompatActivity() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+
         }
+
+
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

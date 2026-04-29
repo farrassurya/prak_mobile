@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#409993</color>
     <color name="halB">#3F8083</color>
+    <color name="mario_red">#E52521</color>
+    <color name="mario_blue">#049CD8</color>
+    <color name="mario_yellow">#FBD000</color>
+    <color name="mario_green">#43B047</color>
+    <color name="mario_sky">#5C94FC</color>
+    <color name="mario_brick">#9A4B00</color>
+    <color name="mario_dark_sky">#4B7BE5</color>
 </resources>
