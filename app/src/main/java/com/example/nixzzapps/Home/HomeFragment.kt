@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.example.nixzzapps.AuthActivity
+import com.example.nixzzapps.Home.Pertemuan_9.NinthActivity
 import com.example.nixzzapps.Home.pertemuan_4.FourthActivity
 import com.example.nixzzapps.Home.pertemuan_7.SeventhActivity
 import com.example.nixzzapps.R
@@ -33,6 +34,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar2)
@@ -68,11 +70,11 @@ class HomeFragment : Fragment() {
                     requireActivity().finish()
 
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Ya!")
+                    Log.e("Info Dialog", "Anda memilih Ya!")
                 }
                 .setNegativeButton("Batal") { dialog, _ ->
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Tidak!")
+                    Log.e("Info Dialog", "Anda memilih Tidak!")
                 }
                 .show()
 
@@ -80,6 +82,10 @@ class HomeFragment : Fragment() {
 
         binding.btnToSeventh.setOnClickListener {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
     }
