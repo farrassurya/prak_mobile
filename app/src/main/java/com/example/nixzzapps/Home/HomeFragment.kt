@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.example.nixzzapps.AuthActivity
 import com.example.nixzzapps.Home.Pertemuan_9.NinthActivity
+import com.example.nixzzapps.Home.pertemuan_10.TenthActivity
 import com.example.nixzzapps.Home.pertemuan_4.FourthActivity
 import com.example.nixzzapps.Home.pertemuan_7.SeventhActivity
 import com.example.nixzzapps.R
@@ -86,6 +87,10 @@ class HomeFragment : Fragment() {
         }
         binding.btnToNinth.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
     }
