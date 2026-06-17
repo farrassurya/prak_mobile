@@ -98,8 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:rowCount="4">
+            android:columnCount="2">
 
             <Button
                 android:id="@+id/btnToSecond"
@@ -210,6 +209,21 @@
                 android:layout_margin="8dp"
                 android:backgroundTint="#FF69B4"
                 android:text="Pertemuan\n11"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:strokeColor="@android:color/black"
+                app:strokeWidth="3dp" />
+
+            <Button
+                android:id="@+id/btnToThirteenth"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/mario_brick"
+                android:text="Pertemuan\n13"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
