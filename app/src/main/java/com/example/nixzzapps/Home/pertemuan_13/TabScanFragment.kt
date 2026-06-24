@@ -17,6 +17,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.example.nixzzapps.R
 import com.example.nixzzapps.databinding.FragmentTabScanBinding
+import com.example.nixzzapps.utils.PermissionHelper
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
@@ -62,10 +63,15 @@ import java.util.concurrent.Executors
             super.onViewCreated(view, savedInstanceState)
             cameraExecutor = Executors.newSingleThreadExecutor()
 
-            if (hasCameraPermission()) {
-                startCamera()
+            if (!PermissionHelper.hasPermission(
+                    requireActivity(),
+                    Manifest.permission.CAMERA)) {
+                PermissionHelper.requestPermission(
+                    permissionLauncher,
+                    Manifest.permission.CAMERA
+                )
             } else {
-                permissionLauncher.launch(Manifest.permission.CAMERA)
+                startCamera()
             }
         }
 
@@ -77,12 +83,12 @@ import java.util.concurrent.Executors
             cameraExecutor.shutdown()
         }
 
-        private fun hasCameraPermission(): Boolean {
-            return ContextCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.CAMERA
-            ) == PackageManager.PERMISSION_GRANTED
-        }
+//        private fun hasCameraPermission(): Boolean {
+//            return ContextCompat.checkSelfPermission(
+//                requireContext(),
+//                Manifest.permission.CAMERA
+//            ) == PackageManager.PERMISSION_GRANTED
+//        }
 
         private fun startCamera() {
             val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())

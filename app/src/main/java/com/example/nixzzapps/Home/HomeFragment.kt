@@ -14,6 +14,7 @@ import com.example.nixzzapps.AuthActivity
 import com.example.nixzzapps.Home.Pertemuan_9.NinthActivity
 import com.example.nixzzapps.Home.pertemuan_10.TenthActivity
 import com.example.nixzzapps.Home.pertemuan_13.ThirteenthActivity
+import com.example.nixzzapps.Home.pertemuan_3.ThirdActivity
 import com.example.nixzzapps.Home.pertemuan_4.FourthActivity
 import com.example.nixzzapps.Home.pertemuan_7.SeventhActivity
 import com.example.nixzzapps.R
@@ -96,6 +97,10 @@ class HomeFragment : Fragment() {
         }
         binding.btnToThirteenth.setOnClickListener {
             val intent = Intent(requireContext(), ThirteenthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToThird.setOnClickListener {
+            val intent = Intent(requireContext(), ThirdActivity::class.java)
             startActivity(intent)
         }
     }
